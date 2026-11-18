@@ -1,17 +1,8 @@
-"""Build the unified 52-class FDI COCO annotations used in the paper from the original dataset downloads.
+"""Build the unified 52-class FDI annotations from the original downloads (see docs/DATASETS.md)
+and check them against splits/.
 
-No images or annotations are redistributed: every dataset is read from its own download (see docs/DATASETS.md),
-converted to one FDI label space, cleaned (duplicates removed, AKUDENTAL lower-jaw quadrants corrected), and split
-according to the lists in splits/. The result is checked against those lists.
-
-Usage:
-  python tools/prepare_data.py \
-      --tufts data/tufts_seed0            # output of tools/prepare_tufts.sh (seed 0)
-      --o2pr data/raw/o2pr                # Roboflow COCO export: train/ and valid/ with _annotations.coco.json
-      --akudental data/raw/akudental      # AKUDENTAL repo folder with images/, annotations/, folds/fold_0/labels/
-      --aku-opg data/raw/aku_opg          # extracted AKU OPG archive (contains dataset/folder 1, 2, 3)
-      --dual data/raw/dual_labeled        # Dual-labeled: images1/ and labels/
-      --out data/annotations
+    python tools/prepare_data.py --tufts data/tufts_seed0 --o2pr data/raw/o2pr --akudental data/raw/akudental \
+        --aku-opg data/raw/aku_opg --dual data/raw/dual_labeled --out data/annotations
 """
 import argparse, glob, json, os, re
 import numpy as np

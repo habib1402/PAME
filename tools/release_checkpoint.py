@@ -1,7 +1,6 @@
-"""Prepare a checkpoint for public release: keep only the model weights (drops optimizer state, about 3x smaller)
-and print its SHA-256 for the model zoo table.
+"""Strip the optimizer state from a checkpoint and print its SHA-256.
 
-  python tools/release_checkpoint.py work_dirs/pame_m2f_swin-t_toa/epoch_50.pth pame_m2f_swin-t_toa_seed0.pth
+    python tools/release_checkpoint.py work_dirs/run/epoch_50.pth pame_seed0.pth
 """
 import argparse, hashlib
 import torch

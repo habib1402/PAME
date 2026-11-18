@@ -1,7 +1,6 @@
-"""Paired comparison of two models on one test set: per-image class-aware mask mAP, Wilcoxon signed-rank test,
-and a bootstrap 95% confidence interval (10,000 resamples) of the mean per-image difference (B - A).
+"""Paired per-image comparison of two prediction files: Wilcoxon test and bootstrap 95% CI of the mean difference.
 
-  python tools/significance.py --ann data/annotations/test_AKU_OPG.json --a preds/naive.pkl --b preds/pame.pkl
+    python tools/significance.py --ann data/annotations/test_AKU_OPG.json --a naive.pkl --b pame.pkl
 """
 import argparse, contextlib, copy, io, json, os, pickle, sys
 import numpy as np

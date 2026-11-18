@@ -9,6 +9,7 @@ description = "Protocol-aware mask embedding for multi-dataset tooth instance se
 readme = "README.md"
 requires-python = ">=3.8"
 license = {text = "Apache-2.0"}
+authors = [{name = "Habib Khan"}]
 
 [tool.setuptools]
 packages = ["pame"]

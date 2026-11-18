@@ -1,11 +1,7 @@
-"""Few-shot protocol selection for a new site (paper Sec. "Few-Shot Protocol Selection").
+"""Pick the best protocol layer or blend for a new site from K labeled images, report mAP on the rest
+(mean over random draws).
 
-Given predictions of several candidates on the target test set (single output layers and blends, from
-tools/infer.py with --protocol / --blend), draw K labeled images at random, keep the candidate with the best
-mask mAP on them, and report its mAP on the remaining images. Repeated for R random draws.
-
-  python tools/fewshot_select.py --ann data/annotations/test_AKU_OPG.json \
-      T=preds/h0.pkl O=preds/h1.pkl A=preds/h2.pkl b121=preds/b121.pkl ... [--K 1 3 5 10] [--draws 20]
+    python tools/fewshot_select.py --ann data/annotations/test_AKU_OPG.json T=h0.pkl O=h1.pkl A=h2.pkl b121=b121.pkl --K 3
 """
 import argparse, contextlib, copy, io, json, os, pickle, random, sys
 import numpy as np

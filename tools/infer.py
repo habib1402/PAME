@@ -1,10 +1,7 @@
-"""Run a trained model on a test set and save its predictions (boxes, scores, labels, RLE masks).
+"""Run a model on a test set and save boxes, scores, labels and RLE masks.
 
-  python tools/infer.py CONFIG CKPT --ann data/annotations/test_Dual_labeled.json --out preds/pame_Dual.pkl \
-      [--protocol 1 | --blend 0.25,0.5,0.25] [--device cuda:0]
-
---protocol k   use output layer k of a PAME model (0 Tufts, 1 O2PR, 2 AKUDENTAL)
---blend w,...  blend the output layers with these weights (mask logits are linear in the layer)
+    python tools/infer.py CONFIG CKPT --ann data/annotations/test_Dual_labeled.json --out preds/x.pkl \
+        [--protocol 1 | --blend 0.25,0.5,0.25]
 """
 import argparse, json, os, pickle
 import numpy as np

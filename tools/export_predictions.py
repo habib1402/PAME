@@ -1,8 +1,6 @@
-"""Convert saved predictions (tools/infer.py) to a standard COCO results file (RLE masks, no images), keyed by the
-original image file name, for public release.
+"""Write predictions as a COCO-style results file (RLE masks, no images).
 
-  python tools/export_predictions.py --pred preds/pame_AKU_OPG.pkl --ann data/annotations/test_AKU_OPG.json \
-      --out results/pame_AKU_OPG_segm.json
+    python tools/export_predictions.py --pred preds/x.pkl --ann data/annotations/test_AKU_OPG.json --out results/x.json
 """
 import argparse, json, os, pickle, sys
 

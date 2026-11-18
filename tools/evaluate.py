@@ -1,11 +1,7 @@
-"""Score saved predictions (tools/infer.py) on a unified test set.
+"""Score predictions from tools/infer.py: mask mAP / AP50 (class-aware and class-agnostic),
+numbering F1 and perfect-chart rate after arch-order decoding.
 
-Segmentation: COCO mask mAP / AP50, class-aware over the FDI classes present in the ground truth, and
-class-agnostic mask mAP. Numbering: detections with score >= 0.5, class-agnostic NMS 0.5, arch-order decoding
-(tools/numbering.py), Hungarian matching on box IoU >= 0.5; F1 of correctly numbered teeth and the rate of
-perfect charts.
-
-  python tools/evaluate.py --pred preds/pame_Dual.pkl --ann data/annotations/test_Dual_labeled.json [--json out.json]
+    python tools/evaluate.py --pred preds/x.pkl --ann data/annotations/test_Dual_labeled.json [--json out.json]
 """
 import argparse, collections, contextlib, copy, io, json, os, pickle, sys
 import numpy as np
