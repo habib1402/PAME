@@ -1,0 +1,5 @@
+# Install PyTorch, mmengine, mmcv 2.1.0, and mmdet 3.3.0 first (see README). Then:
+numpy
+scipy
+pycocotools
+pillow

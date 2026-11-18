@@ -1,0 +1,9 @@
+data/
+work_dirs/
+preds/
+results/
+*.pth
+*.pkl
+__pycache__/
+*.egg-info/
+.ipynb_checkpoints/
