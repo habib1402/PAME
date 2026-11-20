@@ -136,7 +136,7 @@ docs/        datasets, model zoo
 @article{pame2026,
   title   = {Learning From Conflicting Annotation Protocols: Protocol-Aware Multi-Dataset Tooth Instance
              Segmentation in Panoramic Radiographs},
-  author  = {Author, First and Author, Second and Author, Third},
+  author  = {Habib Khan, Faleh AlQahtani, Abeer D. Algarni, and Hela Elmannai},
   journal = {IEEE Transactions on Medical Imaging},
   note    = {under review},
   year    = {2026}
